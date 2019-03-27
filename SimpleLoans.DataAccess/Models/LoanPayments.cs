@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace SimpleLoans.Models
+namespace SimpleLoans.DataAccess.Models
 {
     public class LoanPayments
     {

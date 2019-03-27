@@ -1,0 +1,9 @@
+D:\Emilio\dotnet\SimpleLoan\SimpleLoans.DataAccess\bin\Debug\netstandard2.0\SimpleLoans.DataAccess.deps.json
+D:\Emilio\dotnet\SimpleLoan\SimpleLoans.DataAccess\bin\Debug\netstandard2.0\SimpleLoans.DataAccess.dll
+D:\Emilio\dotnet\SimpleLoan\SimpleLoans.DataAccess\bin\Debug\netstandard2.0\SimpleLoans.DataAccess.pdb
+D:\Emilio\dotnet\SimpleLoan\SimpleLoans.DataAccess\obj\Debug\netstandard2.0\SimpleLoans.DataAccess.csprojAssemblyReference.cache
+D:\Emilio\dotnet\SimpleLoan\SimpleLoans.DataAccess\obj\Debug\netstandard2.0\SimpleLoans.DataAccess.csproj.CoreCompileInputs.cache
+D:\Emilio\dotnet\SimpleLoan\SimpleLoans.DataAccess\obj\Debug\netstandard2.0\SimpleLoans.DataAccess.AssemblyInfoInputs.cache
+D:\Emilio\dotnet\SimpleLoan\SimpleLoans.DataAccess\obj\Debug\netstandard2.0\SimpleLoans.DataAccess.AssemblyInfo.cs
+D:\Emilio\dotnet\SimpleLoan\SimpleLoans.DataAccess\obj\Debug\netstandard2.0\SimpleLoans.DataAccess.dll
+D:\Emilio\dotnet\SimpleLoan\SimpleLoans.DataAccess\obj\Debug\netstandard2.0\SimpleLoans.DataAccess.pdb

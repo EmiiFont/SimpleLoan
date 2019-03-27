@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using SimpleLoans.Models;
+using SimpleLoans.DataAccess.Models;
 
 namespace SimpleLoans.Controllers
 {

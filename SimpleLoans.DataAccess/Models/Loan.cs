@@ -1,6 +1,6 @@
 using System;
 
-namespace SimpleLoans.Models
+namespace SimpleLoans.DataAccess.Models
 {
     public class Loan
     {

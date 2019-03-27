@@ -1,4 +1,4 @@
-namespace SimpleLoans.Models
+namespace SimpleLoans.DataAccess.Models
 {
     public class LoansData
     {
