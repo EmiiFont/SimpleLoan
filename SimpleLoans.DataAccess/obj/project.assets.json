@@ -176,29 +176,29 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\emilio.font\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/emiliofont/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Emilio\\dotnet\\SimpleLoan\\SimpleLoans.DataAccess\\SimpleLoans.DataAccess.csproj",
+      "projectUniqueName": "/Users/emiliofont/Documents/Projects/SimpleLoans.DataAccess/SimpleLoans.DataAccess.csproj",
       "projectName": "SimpleLoans.DataAccess",
-      "projectPath": "D:\\Emilio\\dotnet\\SimpleLoan\\SimpleLoans.DataAccess\\SimpleLoans.DataAccess.csproj",
-      "packagesPath": "C:\\Users\\emilio.font\\.nuget\\packages\\",
-      "outputPath": "D:\\Emilio\\dotnet\\SimpleLoan\\SimpleLoans.DataAccess\\obj\\",
+      "projectPath": "/Users/emiliofont/Documents/Projects/SimpleLoans.DataAccess/SimpleLoans.DataAccess.csproj",
+      "packagesPath": "/Users/emiliofont/.nuget/packages/",
+      "outputPath": "/Users/emiliofont/Documents/Projects/SimpleLoans.DataAccess/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\emilio.font\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/emiliofont/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "https://www.nuget.org/api/v2/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
