@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SimpleLoans.DataAccess.BogusRepository;
 using SimpleLoans.DataAccess.Models;
 
 namespace SimpleLoans.Controllers
@@ -11,11 +12,17 @@ namespace SimpleLoans.Controllers
     [ApiController]
     public class BorrowerController : ControllerBase
     {
+        private readonly IBorrowerRepository _borrowerRepo;
+        public BorrowerController()
+        {
+            _borrowerRepo = new BorrowerRepository();
+        }
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<Borrower>> Get()
         {
-            return new Borrower[] { new Borrower() { Name = "John", Identification = "000-0000000-0"} };
+            var r = _borrowerRepo.GetBorrowers();
+            return r.ToList();
         }
 
         // GET api/values/5
