@@ -12,5 +12,8 @@ namespace SimpleLoans.DataAccess.Models
         public PaymentType PaymentType { get; set; }
 
         public LoanType LoanType { get; set; }
+
+        public decimal PaymentSetByUser { get; set; }
+        public bool ReminderToCapital { get; set; }
     }
 }
