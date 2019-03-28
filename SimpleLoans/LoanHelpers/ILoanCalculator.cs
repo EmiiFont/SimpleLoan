@@ -1,5 +1,5 @@
 using System;
-using SimpleLoans.DataAccess.Models;
+using SimpleLoans.DataAccess.Enums;
 
 namespace SimpleLoans.LoanHelpers
 {

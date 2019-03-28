@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using SimpleLoans.DataAccess.Enums;
 using SimpleLoans.DataAccess.Models;
 
 namespace SimpleLoans.Controllers

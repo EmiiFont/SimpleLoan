@@ -1,5 +1,5 @@
 using System;
-using SimpleLoans.DataAccess.Models;
+using SimpleLoans.DataAccess.Enums;
 
 namespace SimpleLoans.LoanHelpers
 {
@@ -26,19 +26,15 @@ namespace SimpleLoans.LoanHelpers
             {
                 case PaymentType.Daily:
                     return startDate.AddDays(1);
-                    break;
                 //weekly
                 case PaymentType.Weekly:
                     return startDate.AddDays(7);
-                    break;
                 //bi-weekly
                 case PaymentType.BiWeekly:
                     return startDate.AddDays(14);
-                    break;
                 //monthly
                 case PaymentType.Monthly:
                     return startDate.AddMonths(1);
-                    break;
             }
 
             return startDate;

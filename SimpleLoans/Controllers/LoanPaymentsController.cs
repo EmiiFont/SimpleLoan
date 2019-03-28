@@ -21,16 +21,39 @@ namespace SimpleLoans.Controllers
         {
             return new LoanPayments[] { new LoanPayments()};
         }
+
+        [HttpPost("GetPayments")]
+        public ActionResult<IEnumerable<Payments>> GetPayments(Loan loan)
+        {
+            loanCalculator = new AnnuityLoan();
+            loanCalculator.Principal = Convert.ToDouble(loan.Amount);
+            loanCalculator.Rate = (loan.Rate / 100);
+            loanCalculator.Periods = loan.Terms;
+            loanCalculator.PaymentType = loan.PaymentType;
+            
+            var dlist = new List<Payments>();
+            var date = DateTime.Now;
+            
+            for (int n = 1; n <= loanCalculator.Periods; ++n)
+            {
+                date = loanCalculator.GetNextPaymentDate(date);
+                
+                var payment = new Payments();
+                payment.Amount = (decimal)loanCalculator.Payment(n);
+                payment.PaymentDate = date;
+                payment.Interest = loanCalculator.Interest(n);
+                payment.Outstanding = loanCalculator.Outstanding(n);
+                payment.Repayment = loanCalculator.Repayment(n);
+                 
+                dlist.Add(payment);
+            }
+            return dlist;
+        }
         
         [HttpPost]
         public void Post([FromBody] LoanPayments borrower)
         {
-            loanCalculator = new SerialLoan();
-            loanCalculator.Principal = Convert.ToDouble(borrower.Loan.Amount);
-            loanCalculator.Rate = (borrower.Loan.Rate / 100);
-            loanCalculator.Periods = borrower.Loan.Terms;
-            loanCalculator.PaymentType = borrower.Loan.PaymentType;
-
+            
         }
     }
 }

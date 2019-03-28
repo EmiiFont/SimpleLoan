@@ -1,4 +1,4 @@
-namespace SimpleLoans.DataAccess.Models
+namespace SimpleLoans.DataAccess.Enums
 {
     public enum PaymentType
     {
