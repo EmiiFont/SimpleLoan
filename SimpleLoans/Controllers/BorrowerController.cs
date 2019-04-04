@@ -13,9 +13,9 @@ namespace SimpleLoans.Controllers
     public class BorrowerController : ControllerBase
     {
         private readonly IBorrowerRepository _borrowerRepo;
-        public BorrowerController()
+        public BorrowerController(IBorrowerRepository borrowerRepo)
         {
-            _borrowerRepo = new BorrowerRepository();
+          _borrowerRepo = borrowerRepo;
         }
         // GET api/values
         [HttpGet]

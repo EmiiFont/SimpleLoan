@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using SimpleLoans.DataAccess.BogusRepository;
 using SimpleLoans.DataAccess.Models;
 using SimpleLoans.LoanHelpers;
 
@@ -11,9 +12,10 @@ namespace SimpleLoans.Controllers
     public class LoanPaymentsController : ControllerBase
     {
         private ILoanCalculator loanCalculator;
-        public LoanPaymentsController()
+        private readonly IBorrowerRepository _borrowerRepo;
+        public LoanPaymentsController(IBorrowerRepository borrowerRepo)
         {
-            
+            _borrowerRepo = borrowerRepo;
         }
         // GET api/values
         [HttpGet]
@@ -25,6 +27,9 @@ namespace SimpleLoans.Controllers
         [HttpPost("GetPayments")]
         public ActionResult<IEnumerable<Payments>> GetPayments(Loan loan)
         {
+            var dbd = _borrowerRepo;
+            dbd.Add();
+            
             loanCalculator = new AnnuityLoan();
             loanCalculator.Principal = Convert.ToDouble(loan.Amount);
             loanCalculator.Rate = (loan.Rate / 100);
