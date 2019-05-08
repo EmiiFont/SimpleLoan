@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Bogus;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Firestore;
@@ -14,6 +15,7 @@ namespace SimpleLoans.DataAccess.BogusRepository
     {
          IEnumerable<Borrower> GetBorrowers();
          void Add();
+         Task<Borrower> GetBorrowerById(string id);
     }
 
     public class BorrowerRepository : IBorrowerRepository
@@ -25,7 +27,7 @@ namespace SimpleLoans.DataAccess.BogusRepository
         }            
         public void Add()
         {
-            DocumentReference docRef = _firestoreDb.Collection("users").Document("alovelace");
+            DocumentReference docRef = _firestoreDb.Collection("borrowers").Document("alovelace");
             Dictionary<string, object> user = new Dictionary<string, object>
             {
                 { "First", "Ada" },
@@ -33,6 +35,14 @@ namespace SimpleLoans.DataAccess.BogusRepository
                 { "Born", 1815 }
             };
             var k = docRef.SetAsync(user).Result;
+        }
+
+        public async Task<Borrower> GetBorrowerById(string id)
+        {
+            DocumentReference docRef = _firestoreDb.Collection("borrowers").Document(id);
+            DocumentSnapshot snapshot = await docRef.GetSnapshotAsync();
+
+            return snapshot.Exists ? snapshot.ConvertTo<Borrower>() : null;
         }
 
         public IEnumerable<Borrower> GetBorrowers()

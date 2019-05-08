@@ -12,14 +12,9 @@ namespace SimpleLoans.Controllers
     [ApiController]
     public class LoanPaymentsController : ControllerBase
     {
-<<<<<<< HEAD
-        private ILoanCalculator loanCalculator;
         private readonly IBorrowerRepository _borrowerRepo;
-        public LoanPaymentsController(IBorrowerRepository borrowerRepo)
-=======
         private SimplePersonalLoan loanCalculator;
-        public LoanPaymentsController()
->>>>>>> 3bdfce2a23d1c10191ca34adbce98caf8b4e2675
+        public LoanPaymentsController(IBorrowerRepository borrowerRepo)
         {
             _borrowerRepo = borrowerRepo;
         }
@@ -33,14 +28,7 @@ namespace SimpleLoans.Controllers
         [HttpPost("GetPayments")]
         public ActionResult<LoanPayments> GetPayments(Loan loan)
         {
-<<<<<<< HEAD
-            var dbd = _borrowerRepo;
-            dbd.Add();
-            
-            loanCalculator = new AnnuityLoan();
-=======
             loanCalculator = new SimplePersonalLoan();
->>>>>>> 3bdfce2a23d1c10191ca34adbce98caf8b4e2675
             loanCalculator.Principal = Convert.ToDouble(loan.Amount);
             loanCalculator.Rate = (loan.Rate / 100);
             loanCalculator.Periods = loan.Terms;
