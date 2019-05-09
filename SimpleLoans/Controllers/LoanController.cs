@@ -9,6 +9,7 @@ namespace SimpleLoans.Controllers
     [ApiController]
     public class LoanController : ControllerBase
     {
+        
      // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<Loan>> Get()
